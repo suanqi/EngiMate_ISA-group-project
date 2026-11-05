@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "description": "Post-hoc, one case; different query count and conditional source filters.",
+    "case_id": "R10",
+    "case_groups": [
+      [
+        "B03-03"
+      ],
+      [
+        "A06-04"
+      ]
+    ],
+    "baseline_query": "比较 B03 和 A06 如何描述任务依赖，以及硬件未到时能否用模拟接口并行。",
+    "subqueries": [
+      [
+        "B03",
+        "B03 文档关于前序任务完成后才启动后续任务的排期原则是什么？"
+      ],
+      [
+        "A06",
+        "A06 文档认为硬件未到时，软件能否利用模拟接口并行？"
+      ]
+    ],
+    "source_sha256": {
+      "B01": "3ea7e9617873989aebb6e978602593b533ae3a429e40af3bb12e505b3ffc5767",
+      "B02": "10022369998dd2190a57575a9e2a6266ddbbf2a8cbdf582d0654566dac3371cf",
+      "B03": "4ef511f5d54e052daaafd7ebfcf01054a542e5fe5bd6e300c3db6b858eb02c90",
+      "B04": "0c924478782861a2b7452e0ec4c30814beafbff58acc9c607d49c5f22702bac1",
+      "B05": "960f86f5a92299a8b5d1c9297b71a6797cf55dbb3e8bb4b093542978186e2d07",
+      "A03": "2e5d8d9efce433c538c4f311e5069d60037c55fe29d739bf3dd7057326120915",
+      "A06": "6ba36e69bb056b21ab9be3c82b65a8f92a8580b2f17b6176075dbf792051cf6b"
+    },
+    "script_sha256": "4138182749db96be2271eda16e19c4b0622071b150da8089bd356bac560c657c",
+    "retrieval_script_sha256": "b2d566da6e940da9a4c48f682df441650d1f415e49556f9ea2b3138f1daf117a",
+    "source_script_sha256": "b559b7e4c1860882a583d518a8c43ad20d70aacaafa4c48e8416a210abc511ef",
+    "model_sha256": "15b717c382bcb518ba457b93ea6850ede7f4f1cd8937454aa06972366cd19bcc",
+    "warning": "Post-hoc subqueries use knowledge of the target passages; not a held-out evaluation. Source metadata filter is not access control; no XIPU AI execution."
+  },
+  "details": [
+    {
+      "method": "bm25",
+      "condition": "single_query_top6",
+      "per_query_ids": [
+        [
+          "A06-04",
+          "A06-06",
+          "B02-06",
+          "A06-03",
+          "A03-02",
+          "A06-07"
+        ]
+      ],
+      "combined_ids": [
+        "A06-04",
+        "A06-06",
+        "B02-06",
+        "A06-03",
+        "A03-02",
+        "A06-07"
+      ],
+      "all_evidence_covered": false
+    },
+    {
+      "method": "bm25",
+      "condition": "two_queries_unscoped_top3_each",
+      "per_query_ids": [
+        [
+          "B03-03",
+          "B02-02",
+          "A06-04"
+        ],
+        [
+          "A06-04",
+          "B02-06",
+          "B02-03"
+        ]
+      ],
+      "combined_ids": [
+        "B03-03",
+        "B02-02",
+        "A06-04",
+        "B02-06",
+        "B02-03"
+      ],
+      "all_evidence_covered": true
+    },
+    {
+      "method": "bm25",
+      "condition": "two_queries_source_scoped_top3_each",
+      "per_query_ids": [
+        [
+          "B03-03",
+          "B03-04",
+          "B03-01"
+        ],
+        [
+          "A06-04",
+          "A06-03",
+          "A06-07"
+        ]
+      ],
+      "combined_ids": [
+        "B03-03",
+        "B03-04",
+        "B03-01",
+        "A06-04",
+        "A06-03",
+        "A06-07"
+      ],
+      "all_evidence_covered": true
+    },
+    {
+      "method": "dense",
+      "condition": "single_query_top6",
+      "per_query_ids": [
+        [
+          "A06-04",
+          "A06-02",
+          "B02-06",
+          "A03-04",
+          "B05-03",
+          "B02-02"
+        ]
+      ],
+      "combined_ids": [
+        "A06-04",
+        "A06-02",
+        "B02-06",
+        "A03-04",
+        "B05-03",
+        "B02-02"
+      ],
+      "all_evidence_covered": false
+    },
+    {
+      "method": "dense",
+      "condition": "two_queries_unscoped_top3_each",
+      "per_query_ids": [
+        [
+          "B03-03",
+          "A06-04",
+          "B02-05"
+        ],
+        [
+          "B05-01",
+          "B01-03",
+          "B01-02"
+        ]
+      ],
+      "combined_ids": [
+        "B03-03",
+        "A06-04",
+        "B02-05",
+        "B05-01",
+        "B01-03",
+        "B01-02"
+      ],
+      "all_evidence_covered": true
+    },
+    {
+      "method": "dense",
+      "condition": "two_queries_source_scoped_top3_each",
+      "per_query_ids": [
+        [
+          "B03-03",
+          "B03-01",
+          "B03-05"
+        ],
+        [
+          "A06-04",
+          "A06-01",
+          "A06-02"
+        ]
+      ],
+      "combined_ids": [
+        "B03-03",
+        "B03-01",
+        "B03-05",
+        "A06-04",
+        "A06-01",
+        "A06-02"
+      ],
+      "all_evidence_covered": true
+    },
+    {
+      "method": "hybrid_rrf",
+      "condition": "single_query_top6",
+      "per_query_ids": [
+        [
+          "A06-04",
+          "B02-06",
+          "A06-02",
+          "B02-02",
+          "B05-03",
+          "B02-05"
+        ]
+      ],
+      "combined_ids": [
+        "A06-04",
+        "B02-06",
+        "A06-02",
+        "B02-02",
+        "B05-03",
+        "B02-05"
+      ],
+      "all_evidence_covered": false
+    },
+    {
+      "method": "hybrid_rrf",
+      "condition": "two_queries_unscoped_top3_each",
+      "per_query_ids": [
+        [
+          "B03-03",
+          "A06-04",
+          "B02-02"
+        ],
+        [
+          "B02-06",
+          "A06-04",
+          "B05-02"
+        ]
+      ],
+      "combined_ids": [
+        "B03-03",
+        "A06-04",
+        "B02-02",
+        "B02-06",
+        "B05-02"
+      ],
+      "all_evidence_covered": true
+    },
+    {
+      "method": "hybrid_rrf",
+      "condition": "two_queries_source_scoped_top3_each",
+      "per_query_ids": [
+        [
+          "B03-03",
+          "B03-01",
+          "B03-04"
+        ],
+        [
+          "A06-04",
+          "A06-07",
+          "A06-01"
+        ]
+      ],
+      "combined_ids": [
+        "B03-03",
+        "B03-01",
+        "B03-04",
+        "A06-04",
+        "A06-07",
+        "A06-01"
+      ],
+      "all_evidence_covered": true
+    }
+  ]
+}

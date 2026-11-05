@@ -1,0 +1,20 @@
+[
+  {"id":"Q01","category":"exact_id","project":"NOVA","query":"虚构 Nova 项目的 SEN-204 模拟测试电压是多少？","required_groups":[["nova-204"]],"anchors":{"nova-204":"3.3 V"}},
+  {"id":"Q02","category":"exact_id","project":"NOVA","query":"虚构 Nova 项目 SEN-240 的模拟测试电压是多少？","required_groups":[["nova-240"]],"anchors":{"nova-240":"5.0 V"}},
+  {"id":"Q03","category":"cross_project","project":"VEGA","query":"虚构 Vega 项目的 SEN-204 模拟测试电压是多少？","required_groups":[["vega-204"]],"anchors":{"vega-204":"1.8 V"}},
+  {"id":"Q04","category":"exact_id","project":"ENV","query":"环境监测项目任务 T04 的前置依赖是什么？","required_groups":[["env-state"]],"anchors":{"env-state":"T04：集成驱动与显示界面，依赖 T02 和 T03"}},
+  {"id":"Q05","category":"paraphrase","project":"ENV","query":"把温湿度传感器的程序与显示页面连起来之前要完成哪两部分？","required_groups":[["env-state"]],"anchors":{"env-state":"T04：集成驱动与显示界面，依赖 T02 和 T03"}},
+  {"id":"Q06","category":"english","project":"ENV","query":"In the fictional environmental monitoring project, which tasks must finish before T04 integration?","required_groups":[["env-state"]],"anchors":{"env-state":"T04：集成驱动与显示界面，依赖 T02 和 T03"}},
+  {"id":"Q07","category":"fact","project":"ENV","query":"环境监测虚构项目的统一交付截止时间是什么？","required_groups":[["env-brief"]],"anchors":{"env-brief":"2026 年 12 月 15 日 17:00"}},
+  {"id":"Q08","category":"fact","project":"ENV","query":"环境监测虚构课程规定每组多少人？","required_groups":[["env-brief"]],"anchors":{"env-brief":"3 至 5 名成员"}},
+  {"id":"Q09","category":"fact","project":"ENV","query":"环境监测虚构项目的报告最多几页？","required_groups":[["env-brief"]],"anchors":{"env-brief":"不超过 5 页"}},
+  {"id":"Q10","category":"fact","project":"ENV","query":"环境监测项目目前的报告草稿有多少页？","required_groups":[["env-state"]],"anchors":{"env-state":"6 页草稿"}},
+  {"id":"Q11","category":"multi_evidence","project":"ENV","query":"环境项目有 4 人和 6 页草稿，人数与报告长度分别符合要求吗？","required_groups":[["env-brief"],["env-state"]],"anchors":{"env-brief":["3 至 5 名成员","不超过 5 页"],"env-state":["4 名虚构成员","6 页草稿"]}},
+  {"id":"Q12","category":"fact","project":"ENV","query":"虚构环境项目用户说传感器到货延误了多久？","required_groups":[["env-state"]],"anchors":{"env-state":"晚 7 天"}},
+  {"id":"Q13","category":"meeting","project":"ENV","query":"虚构环境项目会议同意的事情是什么？","required_groups":[["env-state"]],"anchors":{"env-state":"大家同意先核对备选供应商"}},
+  {"id":"Q14","category":"multi_evidence","project":"ORION","query":"虚构 Project Orion 两份通知的报告截止日期分别是什么？","required_groups":[["orion-a"],["orion-b"]],"anchors":{"orion-a":"2026-12-10 17:00","orion-b":"2026-12-11 17:00"}},
+  {"id":"Q15","category":"multi_evidence","project":"ORION","query":"虚构 Project Orion 的两个通知对报告页数分别有何要求？","required_groups":[["orion-a"],["orion-b"]],"anchors":{"orion-a":"最多 4 页","orion-b":"最多 5 页"}},
+  {"id":"Q16","category":"no_answer","project":"ENV","query":"虚构环境项目报告占总成绩的百分之多少？","required_groups":[],"anchors":{}},
+  {"id":"Q17","category":"no_answer","project":"ENV","query":"虚构环境项目使用的具体传感器型号是什么？","required_groups":[],"anchors":{}},
+  {"id":"Q18","category":"known_unknown","project":"SOFT","query":"虚构预约网页的 T03 集成测试完成了吗？","required_groups":[["soft-state"]],"anchors":{"soft-state":"没有提供 T02 或 T03 的当前进度"}}
+]

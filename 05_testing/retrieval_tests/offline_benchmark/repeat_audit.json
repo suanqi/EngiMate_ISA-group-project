@@ -1,0 +1,8 @@
+{
+  "first_output_sha256": "5c0672758a66117199bb3fcc02d06914833f7724a8cf680b198b1f14ab042391",
+  "repeat_output_sha256": "76d62ab46e22a26b83c21fd0c8100197ba87c3165cc00cf66273faaea96a53e1",
+  "comparison": "same source, code, model and 972 rows; same top-5 order and computed metrics",
+  "max_absolute_score_difference": 0.0,
+  "scope_and_independent_metric_audit": "passed",
+  "warning": "Repeated deterministic runs are not independent natural-world samples; no XIPU AI execution."
+}

@@ -1,0 +1,13 @@
+{
+  "repeat_equal": true,
+  "raw_metric_recalculation": "passed",
+  "r10_diagnostic": "single query missed at least one required section; both reformulated variants found both",
+  "sha256": {
+    "real_source_results.json": "9967b43c60ed6c62af89ffd734fe4e00da9df35784cffda4d2b0b51e6255f16e",
+    "real_source_repeat.json": "9967b43c60ed6c62af89ffd734fe4e00da9df35784cffda4d2b0b51e6255f16e",
+    "real_source_with_id.json": "f0226423c397790f70552098054979af963b9e6cd74822a6f72aacb416d72b61",
+    "r10_diagnostic_results.json": "28aeab9ca69687b3e87aacd99a1e3233bf9a8ad364cc70e917c4f964ef3570b4",
+    "r10_diagnostic_repeat.json": "28aeab9ca69687b3e87aacd99a1e3233bf9a8ad364cc70e917c4f964ef3570b4"
+  },
+  "warning": "Post-hoc single-case reformulation; no claim of generalization or XIPU AI execution."
+}
